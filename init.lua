@@ -1,9 +1,18 @@
 ------------------------------------------------------
--- Set <space> as the leader key
+-- some customizations to get started
 ------------------------------------------------------
+
+-- relative numbers in netrw
+vim.g.netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
+
+-- set space as leader key
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+-- set <leader>e to open netrw
+vim.keymap.set('n', '<leader>e', ':E<cr>', { silent = false })
+
+-- require my configs
 require 'custom.options'
 
 ------------------------------------------------------
