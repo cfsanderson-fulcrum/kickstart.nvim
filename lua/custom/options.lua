@@ -5,7 +5,7 @@
 -- See also https://vimdoc.sourceforge.net/htmldoc/options.html#'incsearch'
 
 -- options
-vim.o.hlsearch = false
+vim.o.hlsearch = true
 vim.o.mouse = 'a'
 vim.o.clipboard = 'unnamedplus'
 vim.o.breakindent = true
