@@ -172,16 +172,16 @@ require('lazy').setup({
     build = ':TSUpdate',
   },
 
-  {
-    "nvim-tree/nvim-tree.lua",
-    version = "*",
-    dependencies = {
-      "nvim-tree/nvim-web-devicons",
-    },
-    config = function()
-      require("nvim-tree").setup {}
-    end,
-  },
+  --  {
+  --    "nvim-tree/nvim-tree.lua",
+  --    version = "*",
+  --    dependencies = {
+  --      "nvim-tree/nvim-web-devicons",
+  --    },
+  --    config = function()
+  --      require("nvim-tree").setup {}
+  --    end,
+  --  },
 
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
   require 'kickstart.plugins.autoformat',
