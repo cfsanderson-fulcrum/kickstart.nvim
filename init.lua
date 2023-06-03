@@ -1,6 +1,11 @@
 ------------------------------------------------------
 -- some customizations to get started
 ------------------------------------------------------
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- set termguicolors to enable highlight groups
+vim.opt.termguicolors = true
 
 -- require my configs
 require 'custom.options'
@@ -11,7 +16,7 @@ require 'custom.keymaps'
 -- vim.g.maplocalleader = ' '
 
 -- set <leader>e to open netrw
--- vim.keymap.set('n', '<leader>e', ':E<cr>', { silent = false })
+-- vim.keymap.set('n', '<leader>e', '', { silent = false })
 
 
 ------------------------------------------------------
@@ -153,6 +158,7 @@ require('lazy').setup({
   { 'nvim-telescope/telescope.nvim', branch = '0.1.x', dependencies = { 'nvim-lua/plenary.nvim' } },
 
   -- Fuzzy Finder Algorithm which requires local dependencies to be built.
+
   -- Only load if `make` is available. Make sure you have the system
   -- requirements installed.
   {
@@ -172,6 +178,18 @@ require('lazy').setup({
       'nvim-treesitter/nvim-treesitter-textobjects',
     },
     build = ':TSUpdate',
+  },
+
+  {
+    -- nvim-tree
+    "nvim-tree/nvim-tree.lua",
+    version = "*",
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
+    config = function()
+      require("nvim-tree").setup {}
+    end,
   },
 
   -- NOTE: Next Step on Your Neovim Journey: Add/Configure additional "plugins" for kickstart
